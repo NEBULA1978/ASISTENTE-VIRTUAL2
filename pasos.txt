@@ -44,3 +44,10 @@ Esto instalará los scripts pero no generará la advertencia sobre su ubicación
 
 /////////////////////////////////
 
+Ejecutar script:
+Escribes y lee a voz:
+python3 ./main.py
+Hablas y escribe lo hablado:
+python3 ./main2.py
+
+/////////////////////////////////

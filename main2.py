@@ -10,6 +10,7 @@ import speech_recognition as sr
 
 r = sr.Recognizer()
 
+# Hablo con micro y me escribe lo hablado en consola
 with sr.Microphone() as source:
     print("Por favor habla")
     audio = r.listen(source)
