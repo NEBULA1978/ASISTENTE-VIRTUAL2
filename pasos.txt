@@ -1,0 +1,46 @@
+pip install pyttsx3
+❯ pip install SpeechRecognition
+
+Archivo main.py:
+import pyttsx3
+
+engine = pyttsx3.init()
+engine.say("Hola mundo")
+# Para escribir en cosola texto a hablar
+# engine.say(input())
+engine.runAndWait()
+
+///////////////////////////
+
+hay una advertencia sobre el script normalizer que no está en tu variable PATH del sistema.
+
+Para resolverlo en español y agregar la ruta /home/next/.local/bin a tu variable PATH en Linux, puedes hacer lo siguiente:
+
+Agregar el directorio al PATH temporalmente: Puedes usar el siguiente comando en tu terminal para agregar temporalmente este directorio al PATH y así ejecutar los scripts sin la advertencia:
+
+bash
+￼Copy code
+export PATH=$PATH:/home/next/.local/bin
+Esto permitirá que los scripts en ese directorio se ejecuten directamente desde la terminal.
+
+Permitir que el PATH persista entre sesiones: Si quieres que esta configuración se mantenga entre sesiones de terminal, puedes agregar la línea anterior al final de tu archivo de perfil de terminal. Dependiendo de tu shell, el archivo podría llamarse .bashrc, .bash_profile, o .profile. Puedes abrirlo con un editor de texto como nano o vim:
+
+bash
+￼Copy code
+nano ~/.bashrc
+Luego, al final del archivo, agrega la línea:
+
+bash
+￼Copy code
+export PATH=$PATH:/home/next/.local/bin
+Guarda el archivo y reinicia la terminal para que los cambios surtan efecto.
+
+Omitir la advertencia: Si prefieres evitar la advertencia sin modificar el PATH, puedes usar la opción --no-warn-script-location al instalar paquetes:
+
+bash
+￼Copy code
+pip install SpeechRecognition --no-warn-script-location
+Esto instalará los scripts pero no generará la advertencia sobre su ubicación en el PATH.
+
+/////////////////////////////////
+
